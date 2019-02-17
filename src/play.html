@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Tabletop Tile Image Browser</title>
+<script type="text/javascript">
+/** ******************* EDIT THE SECTION BELOW: *******************************************
+  * Add the names of the tile images found in the same directory as this file.
+  * They must be in quotation marks, and include the file extension.
+  * All but the last one must have a comma after.
+  * Save the file then open it in a browser.
+  * ***************************************************************************************/
+var tiles = [
+    "Sample1.png",
+    "Sample2.png",
+    "Sample3.png",
+    "Sample4.png",
+    "Sample5.png",
+    "Sample6.png"
+];
+
+function showTile(name){
+    document.getElementById('tile').style.backgroundImage = "url('"+name+"')";
+}
+
+function generateLinks(){
+    var linksHtml = '';
+    var linkName;
+    tiles.forEach(function(tileName){
+        linkName = tileName.replace(/\.[^/.]+$/, "")
+        linksHtml += "<a href=\"javascript:showTile('"+tileName+"');\">"+linkName+"</a><br>";
+    });
+    document.getElementById('menu').innerHTML = linksHtml;
+}
+
+function roll(max){
+    var num = Math.floor((Math.random() * max) + 1);
+    document.getElementById('resd'+max).innerHTML = num;
+}
+</script>
+
+<style>
+html,body{
+    height:100%;
+    padding:0;
+    margin:0;
+}
+body{
+    background-color:#000;
+    color:#ccc;
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+#menu{
+    max-width:150px;
+    padding:4px 8px 4px 4px;
+    border-right:1px solid #333;
+    height:90%;
+    line-height:1.6em;
+}
+#menu a{
+    color:#ccc;
+    text-decoration:none;
+}
+#tileframe{
+    flex-grow: 1;
+    padding:0;
+    margin:0;
+    text-align:center;
+    vertical-align:middle;
+}
+#tile{
+    background-repeat:no-repeat;
+    background-position:top center;
+    background-size:contain;
+    width:100%;
+    height:98vh;
+}
+#dice{
+    max-width:100px;
+    padding:2px;
+    text-align:center;
+    border-left:2px solid #333;
+}
+
+button{
+    margin-bottom:5px;
+    font-size:1.4em;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    color:#333;
+    background-color:#333;
+}
+
+.rollresult{
+    font-size:1.4em;
+    font-weight:bold;
+}
+
+@media only screen and (max-width: 600px) {
+    #dice{
+        display:none;
+    }
+}
+</style>
+</head>
+<body onload="generateLinks();">
+<div class="container">
+<div id="menu"></div>
+<div id="tileframe"><div id="tile"></div></div>
+<div id="dice">
+    <button onclick="roll(20);">d20</button><br>
+    <div id="resd20" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+    <button onclick="roll(4);">d4</button><br>
+    <div id="resd4" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+    <button onclick="roll(6);">d6</button><br>
+    <div id="resd6" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+    <button onclick="roll(8);">d8</button><br>
+    <div id="resd8" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+    <button onclick="roll(10);">d10</button><br>
+    <div id="resd10" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+    <button onclick="roll(12);">d12</button><br>
+    <div id="resd12" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+    <button onclick="roll(100);">d100</button><br>
+    <div id="resd100" class="rollresult" onclick="this.innerHTML='&nbsp;';">&nbsp;</div><hr>
+</div>
+</div>
+</body>
+</html>
