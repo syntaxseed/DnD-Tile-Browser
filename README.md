@@ -10,6 +10,7 @@ Click the tile image name and it brings the image up. Handy dice-roller buttons 
 ## Instructions:
 
 - Download or copy the play.html file found in the src directory into your folder of tile images.
+- Remove any apostrophes or odd characters from the image filenames.
 - Edit the file and replace the placeholder list of images with the real ones.
 - You must include the file extension.
 - The last one in the list must NOT have a trailing comma.
@@ -22,6 +23,7 @@ Click the tile image name and it brings the image up. Handy dice-roller buttons 
 
 - Use full-screen mode in your browser (usually F11) .Switch tabs easily via keyboard (usually Ctrl+Tab).
 - A source of free tilesets: http://rpgmapshare.com/.
+- List filenames vertically sorted properly with numbers in a directory (Bash terminal): "ls -1v". Then copy-paste these into the play.html file.
 
 ## Credits:
 
