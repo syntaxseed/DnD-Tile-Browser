@@ -1,6 +1,6 @@
 # DnD-Tile-Browser
 
-While playing DnD adventures we wanted a way to have tilesets open in a browser tab, and avoid seeing the spoiler-y thumbnails. We also like to open our PDFs in the brower too, switch to full screen then we only need to switch between (fullscreened) browser tabs for a distraction free gaming experience.
+While playing D&D adventures we wanted a way to have tilesets open in a browser tab, and avoid seeing the spoiler-y thumbnails. We also like to open our PDFs in the brower too, switch to full screen then we only need to switch between (fullscreened) browser tabs for a distraction free gaming experience. Can be used for any set of images you want to browse, not specific to D&D.
 
 Click the tile image name and it brings the image up. Handy dice-roller buttons on the side.
 
@@ -9,7 +9,7 @@ Click the tile image name and it brings the image up. Handy dice-roller buttons 
 
 ## Instructions:
 
-- Download or copy the play.html file into your directory of tile images.
+- Download or copy the play.html file found in the src directory into your folder of tile images.
 - Edit the file and replace the placeholder list of images with the real ones.
 - You must include the file extension.
 - The last one in the list must NOT have a trailing comma.
@@ -26,5 +26,5 @@ Click the tile image name and it brings the image up. Handy dice-roller buttons 
 ## Credits:
 
 * Author: Sherri Wheeler
-* Created For: DnD 5E Solo Gamebooks by Paul Bimler
+* Originally Created For: DnD 5E Solo Gamebooks by Paul Bimler
 * Sample tiles found: http://rpgmapshare.com/ by Steel Rat
