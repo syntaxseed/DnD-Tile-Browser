@@ -16,7 +16,7 @@ Click the tile image name and it brings the image up. Handy dice-roller buttons 
 - Save the file.
 - Right-click the file and open in a web browser.
 - Click the tile names to view them.
-- You can use the dice rollers on the side (not visible on narro phones).
+- You can use the dice rollers on the side (not visible on narrow phones).
 
 ## Tips
 
